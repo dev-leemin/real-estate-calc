@@ -2,9 +2,15 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  // 한국어 URL 인코딩 허용
-  experimental: {
-    // Next.js 15 이상에서는 기본적으로 지원
+  async rewrites() {
+    return [
+      { source: '/취득세-계산기', destination: '/acquisition-tax' },
+      { source: '/대출-계산기', destination: '/loan' },
+      { source: '/양도소득세-계산기', destination: '/capital-gains-tax' },
+      { source: '/전세-월세-계산기', destination: '/rent' },
+      { source: '/증여세-계산기', destination: '/gift-tax' },
+      { source: '/종부세-계산기', destination: '/comprehensive-tax' },
+    ]
   },
 }
 
