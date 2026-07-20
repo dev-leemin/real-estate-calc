@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '이용약관 | 부동산계산기',
+  title: '이용약관 | 세모아',
   alternates: { canonical: 'https://calc.lotto45.kr/terms' },
 }
 
@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="space-y-6 text-sm text-stone-600 leading-relaxed">
         <section>
           <h2 className="text-base font-bold text-stone-900 mb-2">제1조 (목적)</h2>
-          <p>본 약관은 부동산계산기(이하 "서비스")의 이용 조건 및 절차에 관한 사항을 규정합니다.</p>
+          <p>본 약관은 세모아(SEMOA, 이하 "서비스")의 이용 조건 및 절차에 관한 사항을 규정합니다.</p>
         </section>
 
         <section>

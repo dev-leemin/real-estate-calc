@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '사이트 소개 - 부동산계산기',
-  description: '부동산계산기는 2026년 최신 세율을 반영한 취득세, 양도소득세, 종합부동산세, 증여세, 대출 상환, 전세·월세 환산 계산기를 무료로 제공합니다.',
+  title: '서비스 소개 - 세모아',
+  description: '세모아(SEMOA)는 2026년 최신 세율을 반영한 취득세, 양도소득세, 종합부동산세, 증여세, 대출 상환, 전세·월세 환산 계산기를 무료로 제공합니다.',
   alternates: { canonical: 'https://calc.lotto45.kr/about' },
 }
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <span className="text-stone-700">사이트 소개</span>
       </nav>
 
-      <h1 className="text-2xl font-bold text-stone-900 mb-6">부동산계산기 소개</h1>
+      <h1 className="text-2xl font-bold text-stone-900 mb-6">세모아(SEMOA) 소개</h1>
 
       <div className="space-y-8">
         <section className="bg-white border border-stone-200 rounded-2xl p-6">
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <p className="text-sm text-stone-600 leading-relaxed">
             부동산 거래에서 세금은 예상보다 복잡하고 금액도 큽니다.
             취득세 하나만 해도 주택 수, 조정대상지역 여부, 면적에 따라 세율이 크게 달라집니다.
-            이 서비스는 2026년 현행 세법을 반영해 누구나 쉽게 부동산 관련 세금을 계산할 수 있도록 만들었습니다.
+            세모아(SEMOA)는 2026년 현행 세법을 반영해 누구나 쉽게 부동산 관련 세금을 계산할 수 있도록 만든 무료 서비스입니다.
           </p>
         </section>
 

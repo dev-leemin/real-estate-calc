@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '개인정보처리방침 | 부동산계산기',
+  title: '개인정보처리방침 | 세모아',
   alternates: { canonical: 'https://calc.lotto45.kr/privacy-policy' },
 }
 
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-base font-bold text-stone-900 mb-2">1. 수집하는 개인정보</h2>
           <p>
-            부동산계산기(이하 "서비스")는 계산기 이용 시 사용자가 직접 입력한 금액, 기간 등의 수치 정보를 처리합니다.
+            세모아(SEMOA, 이하 "서비스")는 계산기 이용 시 사용자가 직접 입력한 금액, 기간 등의 수치 정보를 처리합니다.
             이 정보는 서버에 저장되지 않으며, 브라우저 내에서만 처리됩니다.
           </p>
           <p className="mt-2">

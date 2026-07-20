@@ -14,28 +14,34 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname()
-  const isCalcPage = navItems.some(item => pathname.startsWith(item.href.replace('/', '/')))
 
   return (
-    <header className="sticky top-0 z-50 bg-[#F3F0EB] border-b-2 border-[#111111]">
+    <header className="sticky top-0 z-50 bg-[#0B1623] border-b border-white/8">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="flex items-center gap-6 h-13">
-          <Link href="/" className="flex items-center gap-1.5 flex-shrink-0">
-            <span className="inline-block w-5 h-5 bg-amber-400 border border-[#111111] rounded-sm" />
-            <span className="font-black text-sm tracking-tight text-[#111111]">부동산계산기</span>
+        <div className="flex items-center gap-5 h-14">
+          {/* 로고 */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
+            <div className="w-7 h-7 bg-amber-400 rounded-lg flex items-center justify-center group-hover:bg-amber-300 transition-colors">
+              <span className="text-[#0B1623] text-[11px] font-black select-none">세</span>
+            </div>
+            <div className="flex flex-col leading-none gap-0.5">
+              <span className="font-black text-sm text-white tracking-tight">세모아</span>
+              <span className="text-[8px] text-white/30 tracking-[0.2em] font-medium">SEMOA</span>
+            </div>
           </Link>
 
-          <nav className="flex items-center gap-0 overflow-x-auto scrollbar-hide flex-1">
+          {/* 네비게이션 */}
+          <nav className="flex items-center gap-0.5 overflow-x-auto scrollbar-hide flex-1">
             {navItems.map(item => {
-              const active = pathname === item.href || pathname.includes(item.href.replace('/취득세-계산기', 'acquisition').replace('/대출-계산기', 'loan').replace('/양도소득세-계산기', 'capital').replace('/전세-월세-계산기', 'rent').replace('/증여세-계산기', 'gift').replace('/종부세-계산기', 'comprehensive'))
+              const active = pathname === item.href || pathname.startsWith(item.href + '/')
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-1 text-xs font-bold whitespace-nowrap transition-all border-b-2 ${
+                  className={`px-3 py-1.5 text-xs font-semibold whitespace-nowrap rounded-lg transition-all duration-150 ${
                     active
-                      ? 'border-[#111111] text-[#111111]'
-                      : 'border-transparent text-stone-500 hover:text-[#111111] hover:border-stone-400'
+                      ? 'bg-amber-400 text-[#0B1623]'
+                      : 'text-white/55 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {item.label}
@@ -44,12 +50,13 @@ export default function Header() {
             })}
           </nav>
 
+          {/* 블로그 */}
           <Link
             href="/blog"
-            className={`text-xs font-bold flex-shrink-0 border-b-2 pb-0 transition-all ${
+            className={`text-xs font-semibold flex-shrink-0 px-3 py-1.5 rounded-lg transition-all duration-150 ${
               pathname.startsWith('/blog')
-                ? 'border-[#111111] text-[#111111]'
-                : 'border-transparent text-stone-400 hover:text-[#111111]'
+                ? 'bg-amber-400 text-[#0B1623]'
+                : 'text-white/55 hover:text-white hover:bg-white/10'
             }`}
           >
             블로그

@@ -22,10 +22,10 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <span className="font-bold text-stone-100 text-sm">부동산계산기</span>
+              <span className="font-bold text-stone-100 text-sm">세모아</span>
             </div>
             <p className="text-xs leading-relaxed text-stone-500">
-              2026년 최신 세율 기준의 부동산 세금 계산기입니다.
+              2026년 최신 세율 기준 부동산 세금 계산 서비스. 취득세·양도세·종부세·증여세·대출·전월세 환산 무료 제공.
               본 계산기는 참고용이며, 정확한 세금은 세무사 또는 국세청 홈택스를 통해 확인하시기 바랍니다.
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-stone-600">© 2026 부동산계산기. 본 서비스는 세금 신고용이 아닌 참고용입니다.</p>
+          <p className="text-xs text-stone-600">© 2026 세모아(SEMOA). 본 서비스는 세금 신고용이 아닌 참고용입니다.</p>
           <p className="text-xs text-stone-600">세율 출처: 지방세법, 소득세법, 종합부동산세법, 상속·증여세법</p>
         </div>
       </div>
