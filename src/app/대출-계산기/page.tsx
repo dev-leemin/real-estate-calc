@@ -27,62 +27,53 @@ export default function LoanPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
-        <nav className="text-xs text-stone-400 mb-5">
-          <Link href="/" className="hover:text-amber-600">홈</Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-stone-700">대출 상환 계산기</span>
-        </nav>
-
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-stone-900 mb-2">대출 상환 계산기</h1>
-          <p className="text-sm text-stone-500 leading-relaxed">
-            대출금액, 연 이자율, 대출 기간을 입력하면 월 납입액과 총 이자를 즉시 계산합니다.
-            원리금균등·원금균등·만기일시상환 방식을 비교하고, 전체 상환 일정표를 확인하세요.
-          </p>
+        <div className="mb-5">
+          <nav className="text-xs text-stone-400 mb-3">
+            <Link href="/" className="hover:text-stone-600">홈</Link>
+            <span className="mx-1.5">/</span>
+            <span>대출 상환 계산기</span>
+          </nav>
+          <h1 className="text-lg font-semibold text-stone-900">대출 상환 계산기</h1>
         </div>
 
         <LoanCalc />
 
         <AdBanner slot="loan-mid" className="my-8" />
 
-        <div className="mt-8 space-y-4">
-          <h2 className="text-base font-bold text-stone-900">대출 관련 정보</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <details className="mt-6 group">
+          <summary className="text-xs text-stone-400 cursor-pointer hover:text-stone-600 select-none list-none flex items-center gap-1">
+            <svg className="w-3 h-3 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            관련 글 보기
+          </summary>
+          <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
               { href: '/blog/equal-payment-vs-equal-principal', title: '원리금균등 vs 원금균등', desc: '총 이자 차이와 선택 기준' },
               { href: '/blog/ltv-dti-dsr-guide', title: 'LTV DTI DSR 완벽 이해', desc: '2026년 대출 규제 기준' },
               { href: '/blog/mortgage-rate-types', title: '주담대 금리 유형 비교', desc: '고정 vs 변동 vs 혼합' },
               { href: '/blog/prepayment-penalty', title: '중도상환수수료 계산법', desc: '면제 조건과 절약 방법' },
             ].map(item => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block bg-white border border-stone-200 rounded-xl p-4 hover:border-amber-300 hover:bg-amber-50 transition-all"
-              >
-                <p className="text-sm font-medium text-stone-800 mb-0.5">{item.title}</p>
-                <p className="text-xs text-stone-500">{item.desc}</p>
+              <Link key={item.href} href={item.href}
+                className="block border border-stone-100 rounded-lg p-3 hover:border-stone-300 transition-colors">
+                <p className="text-xs font-medium text-stone-700 mb-0.5">{item.title}</p>
+                <p className="text-xs text-stone-400">{item.desc}</p>
               </Link>
             ))}
           </div>
-        </div>
+        </details>
 
-        <div className="mt-8">
-          <h2 className="text-base font-bold text-stone-900 mb-3">다른 계산기</h2>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { href: '/취득세-계산기', label: '취득세 계산기' },
-              { href: '/양도소득세-계산기', label: '양도소득세 계산기' },
-              { href: '/전세-월세-계산기', label: '전세·월세 환산기' },
-            ].map(item => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="px-4 py-2 text-xs font-medium border border-stone-200 rounded-xl text-stone-600 hover:border-amber-400 hover:text-amber-700 transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+        <div className="mt-6 pt-6 border-t border-stone-100 flex flex-wrap gap-2">
+          {[
+            { href: '/취득세-계산기', label: '취득세' },
+            { href: '/양도소득세-계산기', label: '양도소득세' },
+            { href: '/전세-월세-계산기', label: '전세·월세' },
+          ].map(item => (
+            <Link key={item.href} href={item.href}
+              className="px-3 py-1.5 text-xs text-stone-500 border border-stone-200 rounded-lg hover:border-stone-400 hover:text-stone-700 transition-colors">
+              {item.label} 계산기
+            </Link>
+          ))}
         </div>
       </div>
     </div>

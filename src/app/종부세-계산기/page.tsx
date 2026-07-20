@@ -27,54 +27,51 @@ export default function ComprehensiveTaxPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
-        <nav className="text-xs text-stone-400 mb-5">
-          <Link href="/" className="hover:text-amber-600">홈</Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-stone-700">종합부동산세 계산기</span>
-        </nav>
-
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-stone-900 mb-2">종합부동산세 계산기</h1>
-          <p className="text-sm text-stone-500 leading-relaxed">
-            주택 공시가격을 입력하면 종합부동산세(종부세)를 즉시 계산합니다.
-            1주택 12억, 다주택 9억 공제를 자동 적용하며, 고령자·장기보유 세액공제도 반영합니다.
-          </p>
+        <div className="mb-5">
+          <nav className="text-xs text-stone-400 mb-3">
+            <Link href="/" className="hover:text-stone-600">홈</Link>
+            <span className="mx-1.5">/</span>
+            <span>종합부동산세 계산기</span>
+          </nav>
+          <h1 className="text-lg font-semibold text-stone-900">종합부동산세 계산기</h1>
         </div>
 
         <ComprehensiveTaxCalc />
 
         <AdBanner slot="comprehensive-tax-mid" className="my-8" />
 
-        <div className="mt-8 space-y-4">
-          <h2 className="text-base font-bold text-stone-900">종부세 관련 정보</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <details className="mt-6 group">
+          <summary className="text-xs text-stone-400 cursor-pointer hover:text-stone-600 select-none list-none flex items-center gap-1">
+            <svg className="w-3 h-3 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            관련 글 보기
+          </summary>
+          <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
               { href: '/blog/comprehensive-tax-guide', title: '종합부동산세 계산법', desc: '세율과 절세 포인트 정리' },
               { href: '/blog/gift-vs-inheritance', title: '부동산 증여 vs 상속', desc: '종부세 절감을 위한 선택' },
             ].map(item => (
               <Link key={item.href} href={item.href}
-                className="block bg-white border border-stone-200 rounded-xl p-4 hover:border-amber-300 hover:bg-amber-50 transition-all">
-                <p className="text-sm font-medium text-stone-800 mb-0.5">{item.title}</p>
-                <p className="text-xs text-stone-500">{item.desc}</p>
+                className="block border border-stone-100 rounded-lg p-3 hover:border-stone-300 transition-colors">
+                <p className="text-xs font-medium text-stone-700 mb-0.5">{item.title}</p>
+                <p className="text-xs text-stone-400">{item.desc}</p>
               </Link>
             ))}
           </div>
-        </div>
+        </details>
 
-        <div className="mt-8">
-          <h2 className="text-base font-bold text-stone-900 mb-3">다른 계산기</h2>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { href: '/취득세-계산기', label: '취득세 계산기' },
-              { href: '/양도소득세-계산기', label: '양도소득세 계산기' },
-              { href: '/증여세-계산기', label: '증여세 계산기' },
-            ].map(item => (
-              <Link key={item.href} href={item.href}
-                className="px-4 py-2 text-xs font-medium border border-stone-200 rounded-xl text-stone-600 hover:border-amber-400 hover:text-amber-700 transition-colors">
-                {item.label}
-              </Link>
-            ))}
-          </div>
+        <div className="mt-6 pt-6 border-t border-stone-100 flex flex-wrap gap-2">
+          {[
+            { href: '/취득세-계산기', label: '취득세' },
+            { href: '/양도소득세-계산기', label: '양도소득세' },
+            { href: '/증여세-계산기', label: '증여세' },
+          ].map(item => (
+            <Link key={item.href} href={item.href}
+              className="px-3 py-1.5 text-xs text-stone-500 border border-stone-200 rounded-lg hover:border-stone-400 hover:text-stone-700 transition-colors">
+              {item.label} 계산기
+            </Link>
+          ))}
         </div>
       </div>
     </div>

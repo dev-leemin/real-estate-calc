@@ -27,38 +27,51 @@ export default function RentConvertPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
-        <nav className="text-xs text-stone-400 mb-5">
-          <Link href="/" className="hover:text-amber-600">홈</Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-stone-700">전세·월세 환산 계산기</span>
-        </nav>
-
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-stone-900 mb-2">전세·월세 환산 계산기</h1>
-          <p className="text-sm text-stone-500 leading-relaxed">
-            전월세 전환율을 적용해 전세금을 월세로, 또는 월세를 전세금으로 환산합니다.
-            전세 대출이자와 월세 비용을 비교해 어느 쪽이 유리한지 확인하세요.
-          </p>
+        <div className="mb-5">
+          <nav className="text-xs text-stone-400 mb-3">
+            <Link href="/" className="hover:text-stone-600">홈</Link>
+            <span className="mx-1.5">/</span>
+            <span>전세·월세 환산기</span>
+          </nav>
+          <h1 className="text-lg font-semibold text-stone-900">전세·월세 환산기</h1>
         </div>
 
         <RentConvertCalc />
 
         <AdBanner slot="rent-mid" className="my-8" />
 
-        <div className="mt-8 space-y-4">
-          <h2 className="text-base font-bold text-stone-900">전·월세 관련 정보</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <details className="mt-6 group">
+          <summary className="text-xs text-stone-400 cursor-pointer hover:text-stone-600 select-none list-none flex items-center gap-1">
+            <svg className="w-3 h-3 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            관련 글 보기
+          </summary>
+          <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
               { href: '/blog/jeonse-vs-monthly-rent', title: '전세 vs 월세, 어느 쪽이 이득', desc: '대출이자와 월세 비용 비교법' },
               { href: '/blog/ltv-dti-dsr-guide', title: 'LTV DTI DSR 대출 규제', desc: '전세 대출 한도 계산 기준' },
             ].map(item => (
               <Link key={item.href} href={item.href}
-                className="block bg-white border border-stone-200 rounded-xl p-4 hover:border-amber-300 hover:bg-amber-50 transition-all">
-                <p className="text-sm font-medium text-stone-800 mb-0.5">{item.title}</p>
-                <p className="text-xs text-stone-500">{item.desc}</p>
+                className="block border border-stone-100 rounded-lg p-3 hover:border-stone-300 transition-colors">
+                <p className="text-xs font-medium text-stone-700 mb-0.5">{item.title}</p>
+                <p className="text-xs text-stone-400">{item.desc}</p>
               </Link>
             ))}
           </div>
+        </details>
+
+        <div className="mt-6 pt-6 border-t border-stone-100 flex flex-wrap gap-2">
+          {[
+            { href: '/취득세-계산기', label: '취득세' },
+            { href: '/대출-계산기', label: '대출' },
+            { href: '/양도소득세-계산기', label: '양도소득세' },
+          ].map(item => (
+            <Link key={item.href} href={item.href}
+              className="px-3 py-1.5 text-xs text-stone-500 border border-stone-200 rounded-lg hover:border-stone-400 hover:text-stone-700 transition-colors">
+              {item.label} 계산기
+            </Link>
+          ))}
         </div>
       </div>
     </div>
