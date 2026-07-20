@@ -1,49 +1,31 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-
-const notices = [
-  { tag: '취득세', text: '생애최초 주택 취득세 감면 200만원 한도 — 2026년에도 유지 확정' },
-  { tag: '양도세', text: '1주택 비과세 기준 실거래가 12억 원 유지, 조정지역 2년 거주 요건 존속' },
-  { tag: '종부세', text: '1주택자 공제 12억 원 · 다주택자 합산 9억 원 기준 2026년 동일 적용' },
-  { tag: '대출', text: 'DSR 2단계 지속 — 은행권 총부채원리금상환비율 40% 한도 유지' },
-  { tag: '증여세', text: '직계존속 10년 합산 공제 5천만 원 (미성년 2천만 원) · 배우자 6억 원' },
+const items = [
+  '2026 취득세 · 생애최초 감면 200만원 한도 유지 확정',
+  '2026 양도세 · 1주택 비과세 실거래가 12억 원 기준 유지',
+  '2026 종부세 · 1주택 공제 12억 원 / 다주택 9억 원 동일 적용',
+  'DSR 2단계 · 은행권 총부채원리금상환비율 40% 한도 유지',
+  '2026 증여세 · 직계존속 10년 합산 공제 5천만 원 (미성년 2천만 원)',
+  '2026 취득세 · 법인 취득세 12% / 3주택 이상 조정지역 12% 유지',
 ]
 
+const ticker = [...items, ...items].join('      ——      ')
+
 export default function NoticeCarousel() {
-  const [idx, setIdx] = useState(0)
-  const [visible, setVisible] = useState(true)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setVisible(false)
-      setTimeout(() => {
-        setIdx(i => (i + 1) % notices.length)
-        setVisible(true)
-      }, 250)
-    }, 4500)
-    return () => clearInterval(timer)
-  }, [])
-
-  const n = notices[idx]
-
   return (
-    <div className="bg-stone-900 border-b border-stone-800">
-      <div className="max-w-5xl mx-auto px-4 h-9 flex items-center gap-3">
-        <span className="text-[10px] font-bold tracking-wide bg-amber-500 text-stone-900 px-2 py-0.5 rounded flex-shrink-0">
-          2026 · {n.tag}
-        </span>
-        <p className={`text-xs text-stone-300 truncate flex-1 transition-opacity duration-200 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-          {n.text}
-        </p>
-        <div className="flex gap-1 flex-shrink-0">
-          {notices.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => { setVisible(false); setTimeout(() => { setIdx(i); setVisible(true) }, 150) }}
-              className={`w-1 h-1 rounded-full transition-all ${i === idx ? 'bg-amber-400 w-3' : 'bg-stone-600 hover:bg-stone-400'}`}
-            />
-          ))}
+    <div className="bg-[#111111] border-b-2 border-[#111111] overflow-hidden">
+      <div className="flex items-center h-9">
+        <div className="flex-shrink-0 bg-amber-400 h-full flex items-center px-3 border-r-2 border-[#111111]">
+          <span className="text-[10px] font-black text-[#111111] tracking-widest uppercase whitespace-nowrap">2026 공지</span>
+        </div>
+        <div className="overflow-hidden flex-1">
+          <div
+            className="flex whitespace-nowrap"
+            style={{ animation: 'ticker-scroll 40s linear infinite' }}
+          >
+            <span className="text-xs text-zinc-300 px-6 font-medium">{ticker}</span>
+            <span className="text-xs text-zinc-300 px-6 font-medium" aria-hidden="true">{ticker}</span>
+          </div>
         </div>
       </div>
     </div>
