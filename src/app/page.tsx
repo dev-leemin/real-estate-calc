@@ -76,12 +76,12 @@ export default function HomePage() {
             <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-[11px] font-semibold text-amber-700">2026년 최신 세율 자동 반영 · 실시간 계산</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black text-[#0B1623] leading-tight tracking-tight">
+          <h1 className="text-[2.6rem] sm:text-[3.4rem] font-black text-[#0B1623]">
             부동산 세금,<br />
             이제 직접<br />
             <span className="text-amber-500">확인하세요.</span>
           </h1>
-          <p className="mt-4 text-sm text-slate-500 font-medium">취득세·양도세·종부세·증여세·대출·전월세 환산 무료 계산 · 참고용</p>
+          <p className="mt-4 text-sm text-slate-500" style={{ fontWeight: 450, letterSpacing: '-0.01em' }}>취득세·양도세·종부세·증여세·대출·전월세 환산 무료 계산 · 참고용</p>
         </div>
 
         {/* ── 비토 계산기 그리드 ── */}
