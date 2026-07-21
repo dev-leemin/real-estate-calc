@@ -71,15 +71,15 @@ export default function HomePage() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-amber-200 rounded-full px-3 py-1 mb-5 shadow-sm">
               <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse" />
-              <span className="text-[11px] font-semibold text-amber-700">2026년 최신 세율 자동 반영 · 실시간 계산</span>
+              <span className="text-[11px] font-semibold text-amber-700">2026 세율 자동 반영 · 무료 실시간 계산</span>
             </div>
             <h1 className="text-[2.8rem] sm:text-[4rem] font-black text-[#0B1623]">
               부동산 세금,<br />
-              이제 직접<br />
-              <span className="text-amber-500">확인하세요.</span>
+              미리 보면<br />
+              <span className="text-amber-500">달라진다.</span>
             </h1>
             <p className="mt-4 text-sm text-slate-500" style={{ fontWeight: 450, letterSpacing: '-0.01em' }}>
-              취득세·양도세·종부세·증여세·대출·전월세 환산 무료 계산 · 참고용
+              취득·양도·종부·증여·대출·전월세 — 무료 계산 · 참고용
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
                   취득세
                 </span>
                 <h2 className="text-2xl sm:text-[1.9rem] font-black text-[#0B1623] leading-snug">
-                  주택 구매 시<br />납부하는 세금
+                  집 살 때<br />내는 세금
                 </h2>
               </div>
 
@@ -121,7 +121,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <div className="flex items-center gap-1 text-[#0B1623] text-sm font-bold group-hover:gap-2 transition-all duration-200">
-                  계산하기 <span>→</span>
+                  바로 계산 <span>→</span>
                 </div>
               </div>
             </Link>
@@ -140,14 +140,14 @@ export default function HomePage() {
               <div className="relative p-5">
                 <span className="text-[10px] font-bold text-white/60 block mb-3">대출 상환</span>
                 <h2 className="text-xl font-black text-white leading-snug">
-                  월 납입금<br />계산하기
+                  매달<br />얼마씩?
                 </h2>
               </div>
 
               <div className="relative p-5 pt-0">
                 <p className="text-xs text-white/55 mb-3">원리금균등 · 원금균등 · 만기일시</p>
                 <div className="flex items-center gap-1 text-white font-bold text-sm group-hover:gap-2 transition-all">
-                  계산하기 <span>→</span>
+                  월 상환 확인 <span>→</span>
                 </div>
               </div>
             </Link>
@@ -167,10 +167,10 @@ export default function HomePage() {
               <span className="absolute right-4 top-4 text-[64px] font-black text-white/[0.06] select-none leading-none">03</span>
               <div className="p-4 sm:p-5">
                 <span className="text-[10px] font-bold text-white/60 block mb-2">양도소득세</span>
-                <h2 className="text-base font-black text-white leading-snug">팔 때<br />내는 세금</h2>
-                <p className="text-xs text-white/55 mt-3 leading-relaxed">비과세 자동판별<br />장기보유특별공제 최대 80%</p>
+                <h2 className="text-base font-black text-white leading-snug">팔기 전<br />세금 확인</h2>
+                <p className="text-xs text-white/55 mt-3 leading-relaxed">비과세 자동판별<br />장특공제 최대 80%</p>
                 <div className="mt-4 flex items-center gap-1 text-white text-xs font-bold group-hover:gap-1.5 transition-all">
-                  계산하기 →
+                  세액 확인 →
                 </div>
               </div>
             </Link>
@@ -187,10 +187,10 @@ export default function HomePage() {
               <span className="absolute right-4 top-4 text-[64px] font-black text-white/[0.06] select-none leading-none">04</span>
               <div className="p-4 sm:p-5">
                 <span className="text-[10px] font-bold text-white/60 block mb-2">전세·월세</span>
-                <h2 className="text-base font-black text-white leading-snug">전월세<br />환산기</h2>
-                <p className="text-xs text-white/55 mt-3 leading-relaxed">전세금↔월세 환산<br />이자 vs 월세 자동 비교</p>
+                <h2 className="text-base font-black text-white leading-snug">전세 vs 월세<br />어느 쪽?</h2>
+                <p className="text-xs text-white/55 mt-3 leading-relaxed">전세금↔월세 환산<br />이자 vs 월세 직접 비교</p>
                 <div className="mt-4 flex items-center gap-1 text-white text-xs font-bold group-hover:gap-1.5 transition-all">
-                  계산하기 →
+                  비교 →
                 </div>
               </div>
             </Link>
@@ -207,10 +207,10 @@ export default function HomePage() {
               <span className="absolute right-4 top-4 text-[64px] font-black text-white/[0.06] select-none leading-none">05</span>
               <div className="p-4 sm:p-5">
                 <span className="text-[10px] font-bold text-white/60 block mb-2">증여세</span>
-                <h2 className="text-base font-black text-white leading-snug">받을 때<br />내는 세금</h2>
+                <h2 className="text-base font-black text-white leading-snug">받기 전<br />세금 먼저</h2>
                 <p className="text-xs text-white/55 mt-3 leading-relaxed">배우자 6억<br />자녀 5천만원 공제</p>
                 <div className="mt-4 flex items-center gap-1 text-white text-xs font-bold group-hover:gap-1.5 transition-all">
-                  계산하기 →
+                  세액 확인 →
                 </div>
               </div>
             </Link>
@@ -253,11 +253,11 @@ export default function HomePage() {
               <div className="relative p-5 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-bold text-amber-400 block mb-2">종합부동산세</span>
-                  <h2 className="text-xl font-black text-white leading-snug">보유 중 내는 세금</h2>
-                  <p className="text-xs text-white/40 mt-1.5">공시가격 기준 · 고령자·장기보유 세액공제 반영</p>
+                  <h2 className="text-xl font-black text-white leading-snug">갖고 있으면<br />과세된다</h2>
+                  <p className="text-xs text-white/40 mt-1.5">공시가격 기준 · 고령자·장기보유 세액공제 자동 반영</p>
                 </div>
                 <div className="flex-shrink-0 flex items-center gap-1 text-amber-400 font-bold text-sm group-hover:gap-2 transition-all pr-2">
-                  계산하기 <span>→</span>
+                  종부세 확인 <span>→</span>
                 </div>
               </div>
             </Link>
@@ -267,7 +267,7 @@ export default function HomePage() {
               {/* 서브틀 그라디언트 */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-50/80 to-sky-50/60 rounded-2xl pointer-events-none" />
               <div className="relative">
-                <p className="text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-4">2026 핵심 기준</p>
+                <p className="text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-4">2026 기준선</p>
                 <div className="grid grid-cols-2 gap-x-3 gap-y-4">
                   {[
                     { label: '취득세 기본세율', value: '1%', sub: '6억 이하 1주택' },
@@ -293,8 +293,8 @@ export default function HomePage() {
         {/* ── 2026 변경사항 ── */}
         <section className="mb-12">
           <div className="flex items-baseline justify-between mb-4">
-            <h2 className="text-xl font-bold text-[#0B1623] tracking-tight">2026 주요 변경사항</h2>
-            <span className="text-[10px] text-slate-400">지방세법 · 소득세법 기준</span>
+            <h2 className="text-xl font-bold text-[#0B1623] tracking-tight">올해 달라진 것</h2>
+            <span className="text-[10px] text-slate-400">지방세법 · 소득세법</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {changes2026.map((c) => (
@@ -314,7 +314,7 @@ export default function HomePage() {
                     ))}
                   </ul>
                   <Link href={c.link} className="text-xs font-semibold text-amber-600 hover:text-amber-700 transition-colors">
-                    자세히 보기 →
+                    더 읽기 →
                   </Link>
                 </div>
               </div>
@@ -325,7 +325,7 @@ export default function HomePage() {
         {/* ── 블로그 ── */}
         <section className="mb-10">
           <div className="flex items-baseline justify-between mb-4">
-            <h2 className="text-xl font-bold text-[#0B1623] tracking-tight">세금 가이드</h2>
+            <h2 className="text-xl font-bold text-[#0B1623] tracking-tight">세금 해설</h2>
             <Link href="/blog" className="text-xs font-semibold text-slate-400 hover:text-amber-600 transition-colors">전체 보기 →</Link>
           </div>
 
@@ -344,7 +344,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-between mt-4">
                 <p className="text-[10px] text-white/30">{recentPosts[0].date} · {recentPosts[0].readTime}분</p>
-                <span className="text-amber-400 text-xs font-bold group-hover:translate-x-0.5 transition-transform">읽기 →</span>
+                <span className="text-amber-400 text-xs font-bold group-hover:translate-x-0.5 transition-transform">전문 →</span>
               </div>
             </Link>
 
@@ -370,8 +370,8 @@ export default function HomePage() {
         {/* 면책 */}
         <div className="border-t border-slate-200 pt-6">
           <p className="text-xs text-slate-400 font-medium">
-            본 계산기는 참고용입니다. 2026년 지방세법·소득세법 기준이며 개인 상황에 따라 실제 세액이 다를 수 있습니다.
-            정확한 세액은 세무사 또는 홈택스(hometax.go.kr)를 통해 확인하세요.
+            참고용 계산기입니다. 2026년 지방세법·소득세법 기준이며, 실제 세액은 개인 상황에 따라 다릅니다.
+            정확한 수치는 세무사 또는 홈택스(hometax.go.kr)에서 검증하세요.
           </p>
         </div>
       </div>
