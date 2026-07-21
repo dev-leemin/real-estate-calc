@@ -1,0 +1,37 @@
+<svg width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="90" r="72" fill="#0EA5E9" opacity="0.06"/>
+
+  <!-- Bar chart -->
+  <rect x="22" y="130" width="28" height="40" rx="3" fill="#BAE6FD" opacity="0.5"/>
+  <rect x="58" y="105" width="28" height="65" rx="3" fill="#7DD3FC" opacity="0.6"/>
+  <rect x="94" y="78" width="28" height="92" rx="3" fill="#38BDF8" opacity="0.7"/>
+  <rect x="130" y="50" width="28" height="120" rx="3" fill="#0EA5E9" opacity="0.85"/>
+  <rect x="130" y="50" width="28" height="120" rx="3" fill="url(#barGrad)"/>
+
+  <!-- Shining top on last bar -->
+  <rect x="130" y="50" width="28" height="8" rx="3" fill="white" opacity="0.3"/>
+
+  <!-- Trend arrow -->
+  <path d="M22 135 Q55 118 88 88 Q118 60 145 45" stroke="#0EA5E9" strokeWidth="2" fill="none" strokeDasharray="4 3" opacity="0.5"/>
+  <polygon points="158,38 145,43 148,57" fill="#0EA5E9" opacity="0.7"/>
+
+  <!-- Percent badges -->
+  <g transform="translate(122, 30)">
+    <rect x="0" y="0" width="56" height="22" rx="6" fill="#0EA5E9" opacity="0.9"/>
+    <text x="28" y="15" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="sans-serif">최대 80%</text>
+  </g>
+
+  <!-- Label -->
+  <text x="100" y="172" textAnchor="middle" fill="#0B1623" fontSize="9" opacity="0.4" fontFamily="sans-serif">장기보유특별공제</text>
+
+  <!-- Axis -->
+  <line x1="18" y1="170" x2="172" y2="170" stroke="#0B1623" strokeWidth="1" opacity="0.08"/>
+
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stopColor="#38BDF8"/>
+      <stop offset="100%" stopColor="#0284C7"/>
+    </linearGradient>
+  </defs>
+</svg>

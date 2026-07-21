@@ -1,0 +1,43 @@
+<svg width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left: 전세 building -->
+  <rect x="18" y="60" width="62" height="100" rx="4" fill="#D97706" opacity="0.15"/>
+  <rect x="18" y="60" width="62" height="10" rx="4" fill="#D97706" opacity="0.3"/>
+  <!-- windows -->
+  <rect x="28" y="78" width="14" height="12" rx="2" fill="#D97706" opacity="0.4"/>
+  <rect x="48" y="78" width="14" height="12" rx="2" fill="#D97706" opacity="0.6"/>
+  <rect x="28" y="98" width="14" height="12" rx="2" fill="#D97706" opacity="0.6"/>
+  <rect x="48" y="98" width="14" height="12" rx="2" fill="#D97706" opacity="0.3"/>
+  <!-- door -->
+  <rect x="36" y="140" width="26" height="20" rx="2" fill="#D97706" opacity="0.4"/>
+  <!-- label -->
+  <text x="49" y="52" textAnchor="middle" fill="#D97706" fontSize="10" fontWeight="700" fontFamily="sans-serif">전세</text>
+  <text x="49" y="25" textAnchor="middle" fill="#D97706" fontSize="11" fontWeight="800" fontFamily="sans-serif">2억</text>
+
+  <!-- Right: 월세 building -->
+  <rect x="120" y="60" width="62" height="100" rx="4" fill="#0B1623" opacity="0.1"/>
+  <rect x="120" y="60" width="62" height="10" rx="4" fill="#0B1623" opacity="0.15"/>
+  <!-- windows -->
+  <rect x="130" y="78" width="14" height="12" rx="2" fill="#0B1623" opacity="0.2"/>
+  <rect x="150" y="78" width="14" height="12" rx="2" fill="#0B1623" opacity="0.3"/>
+  <rect x="130" y="98" width="14" height="12" rx="2" fill="#0B1623" opacity="0.3"/>
+  <rect x="150" y="98" width="14" height="12" rx="2" fill="#0B1623" opacity="0.15"/>
+  <!-- door -->
+  <rect x="138" y="140" width="26" height="20" rx="2" fill="#0B1623" opacity="0.15"/>
+  <!-- label -->
+  <text x="151" y="52" textAnchor="middle" fill="#0B1623" fontSize="10" fontWeight="700" fontFamily="sans-serif" opacity="0.6">월세</text>
+  <text x="151" y="25" textAnchor="middle" fill="#0B1623" fontSize="10" fontWeight="800" fontFamily="sans-serif" opacity="0.5">50+30</text>
+
+  <!-- Exchange arrows -->
+  <path d="M88 95 L112 95" stroke="#D97706" strokeWidth="2.5" strokeLinecap="round"/>
+  <polygon points="112,91 120,95 112,99" fill="#D97706"/>
+
+  <path d="M112 110 L88 110" stroke="#0B1623" strokeWidth="2.5" strokeLinecap="round" opacity="0.4"/>
+  <polygon points="88,106 80,110 88,114" fill="#0B1623" opacity="0.4"/>
+
+  <!-- VS badge -->
+  <rect x="88" y="98" width="24" height="16" rx="4" fill="#D97706"/>
+  <text x="100" y="110" textAnchor="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="sans-serif">VS</text>
+
+  <!-- conversion rate label -->
+  <text x="100" y="170" textAnchor="middle" fill="#0B1623" fontSize="9" fontFamily="sans-serif" opacity="0.35">전월세 전환율 적용</text>
+</svg>
