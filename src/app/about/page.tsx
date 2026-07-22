@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: '서비스 소개 - 세모아',
   description: '세모아(SEMOA)는 2026년 최신 세율을 반영한 취득세, 양도소득세, 종합부동산세, 증여세, 대출 상환, 전세·월세 환산 계산기를 무료로 제공합니다.',
-  alternates: { canonical: 'https://calc.lotto45.kr/about' },
+  alternates: { canonical: 'https://calc.friz.dev/about' },
 }
 
 export default function AboutPage() {

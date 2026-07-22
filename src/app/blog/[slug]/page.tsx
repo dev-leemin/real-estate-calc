@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://calc.lotto45.kr/blog/${post.slug}` },
+    alternates: { canonical: `https://calc.friz.dev/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -67,16 +67,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: { '@type': 'Organization', name: '세모아' },
     datePublished: post.date,
     dateModified: post.date,
-    mainEntityOfPage: `https://calc.lotto45.kr/blog/${post.slug}`,
+    mainEntityOfPage: `https://calc.friz.dev/blog/${post.slug}`,
   }
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-      { '@type': 'ListItem', position: 2, name: '블로그', item: 'https://calc.lotto45.kr/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://calc.lotto45.kr/blog/${post.slug}` },
+      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+      { '@type': 'ListItem', position: 2, name: '블로그', item: 'https://calc.friz.dev/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://calc.friz.dev/blog/${post.slug}` },
     ],
   }
 

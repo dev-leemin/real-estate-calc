@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: '취득세 계산기 - 2026년 최신 세율 | 1·2·3주택 조정지역 자동 계산',
   description:
     '2026년 지방세법 기준 취득세를 실시간으로 계산하세요. 1주택 1%, 2주택 조정지역 8%, 3주택 이상 12%, 법인 12%. 지방교육세·농어촌특별세 포함.',
-  alternates: { canonical: 'https://calc.lotto45.kr/%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+  alternates: { canonical: 'https://calc.friz.dev/%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
 }
 
 const jsonLd = {
@@ -30,8 +30,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-    { '@type': 'ListItem', position: 2, name: '취득세 계산기', item: 'https://calc.lotto45.kr/%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+    { '@type': 'ListItem', position: 2, name: '취득세 계산기', item: 'https://calc.friz.dev/%EC%B7%A8%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
   ],
 }
 

@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: '양도소득세 계산기 - 2026년 최신 세율 | 1주택 비과세·장기보유공제 자동 계산',
   description:
     '양도차익, 보유기간, 거주기간을 입력하면 양도소득세를 즉시 계산합니다. 1주택 비과세(12억 이하) 판별, 장기보유특별공제 최대 80% 자동 적용.',
-  alternates: { canonical: 'https://calc.lotto45.kr/%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+  alternates: { canonical: 'https://calc.friz.dev/%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
 }
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-    { '@type': 'ListItem', position: 2, name: '양도소득세 계산기', item: 'https://calc.lotto45.kr/%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+    { '@type': 'ListItem', position: 2, name: '양도소득세 계산기', item: 'https://calc.friz.dev/%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
   ],
 }
 

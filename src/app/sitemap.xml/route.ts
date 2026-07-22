@@ -1,6 +1,6 @@
 import { blogPosts } from '@/data/blog-posts'
 
-const BASE_URL = 'https://calc.lotto45.kr'
+const BASE_URL = 'https://calc.friz.dev'
 
 export function GET() {
   const staticPages = [

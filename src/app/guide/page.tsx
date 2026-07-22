@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: '부동산 세금 종류 한눈에 보기 - 취득·보유·처분 단계별 정리',
   description: '부동산을 취득, 보유, 처분할 때 각각 내는 세금의 종류와 시기를 한눈에 정리합니다. 취득세, 재산세, 종부세, 양도소득세, 증여세 설명.',
-  alternates: { canonical: 'https://calc.lotto45.kr/guide' },
+  alternates: { canonical: 'https://calc.friz.dev/guide' },
 }
 
 export default function GuidePage() {

@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: '대출 상환 계산기 - 원리금균등·원금균등·만기일시 월 납입액 계산',
   description:
     '대출금액, 이자율, 기간을 입력하면 월 납입액과 총 이자를 즉시 계산합니다. 원리금균등·원금균등·만기일시상환 비교, 상환 일정표 제공.',
-  alternates: { canonical: 'https://calc.lotto45.kr/%EB%8C%80%EC%B6%9C-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+  alternates: { canonical: 'https://calc.friz.dev/%EB%8C%80%EC%B6%9C-%EA%B3%84%EC%82%B0%EA%B8%B0' },
 }
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-    { '@type': 'ListItem', position: 2, name: '대출 계산기', item: 'https://calc.lotto45.kr/%EB%8C%80%EC%B6%9C-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+    { '@type': 'ListItem', position: 2, name: '대출 계산기', item: 'https://calc.friz.dev/%EB%8C%80%EC%B6%9C-%EA%B3%84%EC%82%B0%EA%B8%B0' },
   ],
 }
 

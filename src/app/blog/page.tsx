@@ -5,7 +5,7 @@ import { blogPosts } from '@/data/blog-posts'
 export const metadata: Metadata = {
   title: '부동산 세금 블로그 - 취득세·양도세·종부세 완벽 가이드',
   description: '취득세, 양도소득세, 종합부동산세, 증여세, 대출 관련 최신 세금 정보와 절세 가이드를 제공합니다.',
-  alternates: { canonical: 'https://calc.lotto45.kr/blog' },
+  alternates: { canonical: 'https://calc.friz.dev/blog' },
 }
 
 const categoryColors: Record<string, string> = {

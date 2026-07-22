@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileBottomNav from '@/components/MobileBottomNav'
 
-const siteUrl = 'https://calc.lotto45.kr'
+const siteUrl = 'https://calc.friz.dev'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

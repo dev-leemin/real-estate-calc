@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: '증여세 계산기 - 배우자·자녀·기타 관계별 공제액 자동 적용',
   description:
     '증여재산가액과 관계(배우자 6억, 자녀 5천만원, 미성년 2천만원)를 선택하면 증여세를 즉시 계산합니다. 2026년 상속·증여세법 기준.',
-  alternates: { canonical: 'https://calc.lotto45.kr/%EC%A6%9D%EC%97%AC%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+  alternates: { canonical: 'https://calc.friz.dev/%EC%A6%9D%EC%97%AC%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
 }
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-    { '@type': 'ListItem', position: 2, name: '증여세 계산기', item: 'https://calc.lotto45.kr/%EC%A6%9D%EC%97%AC%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+    { '@type': 'ListItem', position: 2, name: '증여세 계산기', item: 'https://calc.friz.dev/%EC%A6%9D%EC%97%AC%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
   ],
 }
 

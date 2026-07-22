@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: '이용약관 | 세모아',
-  alternates: { canonical: 'https://calc.lotto45.kr/terms' },
+  alternates: { canonical: 'https://calc.friz.dev/terms' },
 }
 
 export default function TermsPage() {

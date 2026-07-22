@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: '전세·월세 환산 계산기 - 전세금을 월세로, 월세를 전세로 변환',
   description:
     '전월세 전환율 기준으로 전세금↔월세를 환산하세요. 전세 대출이자와 월세 비용을 비교해 어떤 선택이 유리한지 알 수 있습니다.',
-  alternates: { canonical: 'https://calc.lotto45.kr/%EC%A0%84%EC%84%B8-%EC%9B%94%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+  alternates: { canonical: 'https://calc.friz.dev/%EC%A0%84%EC%84%B8-%EC%9B%94%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
 }
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.lotto45.kr' },
-    { '@type': 'ListItem', position: 2, name: '전세·월세 환산 계산기', item: 'https://calc.lotto45.kr/%EC%A0%84%EC%84%B8-%EC%9B%94%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://calc.friz.dev' },
+    { '@type': 'ListItem', position: 2, name: '전세·월세 환산 계산기', item: 'https://calc.friz.dev/%EC%A0%84%EC%84%B8-%EC%9B%94%EC%84%B8-%EA%B3%84%EC%82%B0%EA%B8%B0' },
   ],
 }
 

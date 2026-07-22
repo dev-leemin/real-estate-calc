@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: '세모아 - 부동산 세금 계산기 | 취득세·양도세·종부세·증여세·대출',
   description:
     '취득세, 양도소득세, 종합부동산세, 증여세, 대출 상환, 전세·월세 환산을 한 곳에서. 2026년 최신 세율 자동 반영, 실시간 계산.',
-  alternates: { canonical: 'https://calc.lotto45.kr' },
+  alternates: { canonical: 'https://calc.friz.dev' },
 }
 
 const homeFaqJsonLd = {
