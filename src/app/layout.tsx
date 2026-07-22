@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
+  verification: {
+    google: 'BuMi23WpVP_zjGuUCKKp0xb0rBvd8EbeaykFhuv8tC4',
+  },
 }
 
 const websiteJsonLd = {
