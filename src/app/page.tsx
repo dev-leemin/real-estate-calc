@@ -54,42 +54,42 @@ const calculators = [
   {
     num: '01',
     name: '취득세 계산기',
-    desc: '주택 수 · 조정지역 여부에 따라 세율 자동 적용',
+    desc: '1주택 1%, 2주택 조정지역 8%. 주택 수에 따라 세율이 크게 달라진다',
     rate: '1 – 12%',
     href: '/취득세-계산기',
   },
   {
     num: '02',
     name: '대출 상환 계산기',
-    desc: '원리금균등 · 원금균등 · 만기일시상환 비교',
+    desc: '3억 빌리면 매달 얼마? 이자 총액은? 30년 상환 스케줄로 확인',
     rate: '월 납입금',
     href: '/대출-계산기',
   },
   {
     num: '03',
     name: '양도소득세 계산기',
-    desc: '비과세 판별 · 장특공제 · 다주택 중과 반영',
+    desc: '1주택 12억 이하 비과세. 팔기 전, 얼마가 나오는지 미리 본다',
     rate: '6 – 45%',
     href: '/양도소득세-계산기',
   },
   {
     num: '04',
     name: '전세·월세 환산기',
-    desc: '전월세 전환율 기준 자동 환산 · 이자 vs 월세 비교',
+    desc: '전세 이자 vs 월세 — 숫자로 따지면 어느 쪽이 실제로 싼가',
     rate: '전환율',
     href: '/전세-월세-계산기',
   },
   {
     num: '05',
     name: '증여세 계산기',
-    desc: '관계별 공제 한도 · 10년 합산 과세 기준',
+    desc: '자녀 5천만원 공제, 배우자 6억. 나눠 줄수록 세금이 줄어든다',
     rate: '10 – 50%',
     href: '/증여세-계산기',
   },
   {
     num: '06',
     name: '종합부동산세 계산기',
-    desc: '공시가 · 공정시장가액비율 · 고령자·장기보유 공제',
+    desc: '공시가 12억 넘으면 매년 나온다. 고령자·장기보유 공제도 반영',
     rate: '공시가 12억↑',
     href: '/종부세-계산기',
   },
@@ -103,9 +103,9 @@ const stats2026 = [
 ]
 
 const statsBorderClass = [
-  'border-r border-b border-slate-200 sm:border-b-0',
-  'border-b border-slate-200 sm:border-b-0 sm:border-r sm:border-slate-200',
-  'border-r border-slate-200',
+  'border-r border-b border-amber-200/60 sm:border-b-0',
+  'border-b border-amber-200/60 sm:border-b-0 sm:border-r sm:border-amber-200/60',
+  'border-r border-amber-200/60',
   '',
 ]
 
@@ -183,17 +183,29 @@ const calcExamples = [
 const changes2026 = [
   {
     category: '취득세',
-    items: ['생애최초 주택 취득세 감면 200만원 유지', '다주택자 조정지역 8~12% 중과 지속', '법인 취득세 12% 동일'],
+    items: [
+      '생애최초 주택 취득세 감면 200만원 유지',
+      '다주택자 조정지역 8~12% 중과 지속',
+      '법인 취득세 12% 동일',
+    ],
     link: '/blog/acquisition-tax-2026',
   },
   {
     category: '양도소득세',
-    items: ['1주택 비과세 기준 12억 이하 유지', '조정지역 2년 거주 요건 존속', '다주택자 중과 한시배제 종료'],
+    items: [
+      '1주택 비과세 기준 12억 이하 유지',
+      '조정지역 취득 시 2년 거주 요건 존속',
+      '다주택자 중과 한시배제 종료',
+    ],
     link: '/blog/one-home-nontaxable',
   },
   {
     category: '대출 규제',
-    items: ['DSR 2단계 — 은행권 40% 적용', 'LTV 70% (조정지역 60%)', '전세자금대출 DSR 포함 검토 중'],
+    items: [
+      'DSR 2단계 — 은행권 40% 적용 중',
+      'LTV 70% (조정지역 60%)',
+      '전세자금대출 DSR 포함 검토 진행',
+    ],
     link: '/blog/ltv-dti-dsr-guide',
   },
 ]
@@ -201,32 +213,32 @@ const changes2026 = [
 const faqs = [
   {
     q: '취득세를 줄이는 방법이 있나요?',
-    a: '생애최초 주택 구입 시 최대 200만원 감면(소득 기준 있음). 85㎡ 이하는 농어촌특별세 면제. 6억 이하 1주택은 기본세율 1%가 적용됩니다.',
+    a: '생애최초 구입 시 최대 200만원 감면(소득 기준 있음). 85㎡·6억 이하는 농어촌특별세 면제. 1주택자는 기본 1%.',
     link: '/blog/acquisition-tax-2026',
   },
   {
-    q: '1주택 양도세 비과세 요건은?',
-    a: '실거래가 12억원 이하 1주택을 2년 이상 보유하면 비과세입니다. 조정대상지역 취득 시 보유 기간 중 2년 거주 요건이 추가됩니다.',
+    q: '1주택자는 양도세를 안 내도 되나요?',
+    a: '실거래가 12억 이하 + 2년 이상 보유하면 비과세. 조정지역에서 취득했다면 2년 거주까지 채워야 한다.',
     link: '/blog/one-home-nontaxable',
   },
   {
     q: '종부세 대상인지 어떻게 알 수 있나요?',
-    a: '1주택자는 공시가격 12억원 초과 시 과세됩니다. 다주택자는 보유 주택 합산 공시가격 9억원 초과 시 대상입니다. 공동명의는 각 6억씩 공제됩니다.',
+    a: '1주택자는 공시가 12억 초과 시, 다주택자는 합산 공시가 9억 초과 시 과세. 공동명의는 각 6억씩 공제된다.',
     link: '/종부세-계산기',
   },
   {
-    q: '증여세 공제 한도와 절세 방법은?',
-    a: '배우자 6억원, 성인 자녀 5천만원, 미성년 자녀 2천만원 (10년 합산). 한도 소진 후 10년이 지나면 공제가 재적용되므로 장기 분할 증여가 유리합니다.',
+    q: '증여세를 줄이는 방법은?',
+    a: '성인 자녀 기준 10년에 5천만원 공제. 10년이 지나면 공제가 다시 생기므로 일찍, 나눠서 증여하는 것이 유리하다.',
     link: '/증여세-계산기',
   },
   {
     q: '전세와 월세 중 어느 쪽이 유리한가요?',
-    a: '전세 대출이자율이 전월세 전환율(통상 3~4%)보다 낮으면 전세가 유리합니다. 다만 전세보증금 미반환 리스크도 함께 고려해야 합니다.',
+    a: '전세 대출이자율이 전월세 전환율(보통 3~4%)보다 낮으면 전세가 유리. 보증금 미반환 리스크는 별도로 따져야 한다.',
     link: '/전세-월세-계산기',
   },
   {
     q: '다주택자 취득세 중과세율은?',
-    a: '조정대상지역: 2주택 8%, 3주택 이상 12%. 비조정지역: 2주택 일반세율(1~3%), 3주택 이상 8%. 법인은 지역 무관 12%가 적용됩니다.',
+    a: '조정지역 2주택 8%, 3주택 이상 12%. 비조정지역 3주택 이상 8%. 법인은 지역 무관 12%.',
     link: '/blog/adjusted-area-acquisition-tax',
   },
 ]
@@ -243,23 +255,24 @@ export default function HomePage() {
 
         {/* ── 히어로 ── */}
         <div className="mb-16">
-          <p className="text-[11px] font-bold text-amber-600 tracking-widest uppercase mb-5">
-            부동산 세금 계산기 · 2026년 최신 세율
-          </p>
+          <div className="flex items-center gap-2 mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+            <span className="text-xs font-semibold text-amber-600">2026년 최신 세율 반영</span>
+          </div>
           <h1 className="text-5xl sm:text-[4.2rem] font-black text-[#0B1623]" style={{ lineHeight: 1.05 }}>
             부동산 세금,<br />
             미리 보면<br />
             <span className="text-amber-500">달라진다.</span>
           </h1>
           <p className="mt-6 text-sm text-slate-500 leading-relaxed">
-            취득세 · 양도세 · 종부세 · 증여세 · 대출 · 전월세 환산.<br />
-            계약 전, 등기 전, 매도 전. 항상 먼저 확인하세요.
+            취득·양도·종부·증여·대출·전월세 환산.<br />
+            숫자가 먼저다.
           </p>
         </div>
 
-        {/* ── 계산기 목록 ── */}
+        {/* ── 계산기 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-2">계산기</p>
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">계산기 6종</p>
           <div className="border-t border-slate-100">
             {calculators.map((calc) => (
               <Link
@@ -275,7 +288,7 @@ export default function HomePage() {
                     <p className="text-[15px] font-bold text-[#0B1623] group-hover:text-amber-600 transition-colors leading-tight">
                       {calc.name}
                     </p>
-                    <p className="text-xs text-slate-400 mt-0.5">{calc.desc}</p>
+                    <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">{calc.desc}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 shrink-0 ml-4">
@@ -289,8 +302,8 @@ export default function HomePage() {
 
         {/* ── 2026 핵심 기준 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-3">2026 기준선</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 border border-slate-200 rounded-xl overflow-hidden">
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">2026 핵심 기준</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 border border-amber-200/60 rounded-xl overflow-hidden bg-amber-50/30">
             {stats2026.map((s, i) => (
               <div key={s.label} className={`p-4 ${statsBorderClass[i]}`}>
                 <div className="text-2xl font-black text-amber-500 tabular leading-none">{s.value}</div>
@@ -301,15 +314,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 언제, 무슨 세금? ── */}
+        {/* ── 거래 단계별 세금 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-2">언제 내는가</p>
-          <div className="border-t border-slate-100">
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">거래 단계별 세금</p>
+          <div className="bg-slate-50 rounded-2xl overflow-hidden">
             {taxTimeline.map((t, i) => (
               <Link
                 key={t.tax}
                 href={t.href}
-                className="flex gap-5 py-4 border-b border-slate-100 group hover:bg-slate-50 -mx-4 px-4 transition-colors"
+                className={`flex gap-5 px-5 py-4 group hover:bg-slate-100 transition-colors ${i < taxTimeline.length - 1 ? 'border-b border-slate-200/70' : ''}`}
               >
                 <div className="shrink-0 w-14 pt-0.5">
                   <span className="text-xs font-black text-amber-500 tabular">{String(i + 1).padStart(2, '0')}</span>
@@ -320,12 +333,12 @@ export default function HomePage() {
                     <p className="text-sm font-bold text-[#0B1623] group-hover:text-amber-600 transition-colors">
                       {t.tax}
                     </p>
-                    <span className="text-xs text-slate-300 tabular">{t.rate}</span>
+                    <span className="text-xs text-slate-400 tabular">{t.rate}</span>
                   </div>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">{t.desc}</p>
                   <p className="text-[10px] text-slate-300 mt-1.5">{t.deadline}</p>
                 </div>
-                <span className="text-slate-200 group-hover:text-amber-400 transition-colors text-sm shrink-0 self-center">
+                <span className="text-slate-300 group-hover:text-amber-400 transition-colors text-sm shrink-0 self-center">
                   →
                 </span>
               </Link>
@@ -333,9 +346,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 계산 예시 ── */}
+        {/* ── 실제로 이렇게 나온다 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-3">계산 예시</p>
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">실제로 이렇게 나온다</p>
           <div className="space-y-3">
             {calcExamples.map((ex) => (
               <div key={ex.label} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -373,12 +386,15 @@ export default function HomePage() {
 
         <AdBanner slot="home-mid" className="my-8" />
 
-        {/* ── 올해 달라진 것 ── */}
+        {/* ── 2026 세법 변경 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-2">올해 달라진 것</p>
-          <div className="border-t border-slate-100">
-            {changes2026.map((c) => (
-              <div key={c.category} className="py-4 border-b border-slate-100">
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">2026 세법 변경</p>
+          <div className="bg-slate-50 rounded-2xl overflow-hidden">
+            {changes2026.map((c, i) => (
+              <div
+                key={c.category}
+                className={`px-5 py-4 ${i < changes2026.length - 1 ? 'border-b border-slate-200/70' : ''}`}
+              >
                 <div className="flex items-baseline justify-between mb-2">
                   <p className="text-sm font-bold text-[#0B1623]">{c.category}</p>
                   <Link
@@ -401,9 +417,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 자주 묻는 질문 ── */}
+        {/* ── 자주 묻는 것들 ── */}
         <section className="mb-16">
-          <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-2">자주 묻는 질문</p>
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">자주 묻는 것들</p>
           <div className="border-t border-slate-100">
             {faqs.map((faq) => (
               <div key={faq.q} className="py-4 border-b border-slate-100">
@@ -420,20 +436,20 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 세금 해설 ── */}
+        {/* ── 읽기 ── */}
         <section className="mb-12">
-          <div className="flex items-baseline justify-between mb-2">
-            <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase">세금 해설</p>
+          <div className="flex items-baseline justify-between mb-3">
+            <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase">읽기</p>
             <Link href="/blog" className="text-xs font-semibold text-slate-400 hover:text-amber-600 transition-colors">
-              전체 보기 →
+              전체 →
             </Link>
           </div>
-          <div className="border-t border-slate-100">
-            {recentPosts.map((post) => (
+          <div className="bg-slate-50 rounded-2xl overflow-hidden">
+            {recentPosts.map((post, i) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="flex items-start gap-4 py-4 border-b border-slate-100 group hover:bg-slate-50 -mx-4 px-4 transition-colors"
+                className={`flex items-start gap-4 px-5 py-4 group hover:bg-slate-100 transition-colors ${i < recentPosts.length - 1 ? 'border-b border-slate-200/70' : ''}`}
               >
                 <div className="flex-1">
                   <p className="text-[10px] font-semibold text-amber-600 mb-1">{post.category}</p>
@@ -444,7 +460,7 @@ export default function HomePage() {
                     {post.date} · {post.readTime}분
                   </p>
                 </div>
-                <span className="text-slate-200 group-hover:text-amber-400 transition-colors text-sm shrink-0 mt-1">
+                <span className="text-slate-300 group-hover:text-amber-400 transition-colors text-sm shrink-0 mt-1">
                   →
                 </span>
               </Link>
