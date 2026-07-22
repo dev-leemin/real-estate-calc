@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         )}
       </head>
-      <body className="bg-[#F8FAFC] text-[#0B1623] min-h-screen flex flex-col">
+      <body className="bg-white text-[#0B1623] min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 pb-20 md:pb-0">
           {children}
