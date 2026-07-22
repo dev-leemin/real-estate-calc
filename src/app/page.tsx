@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NoticeCarousel from '@/components/NoticeCarousel'
 import AdBanner from '@/components/AdBanner'
+import FadeIn from '@/components/FadeIn'
+import MiniAcquisitionCalc from '@/components/MiniAcquisitionCalc'
 import { blogPosts } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
@@ -253,27 +255,36 @@ export default function HomePage() {
 
       <div className="max-w-3xl mx-auto px-4 pt-10 pb-20">
 
-        {/* ── 히어로 ── */}
+        {/* ── 히어로 — 로드 시 fadeUp ── */}
         <div className="mb-16">
-          <h1 className="text-5xl sm:text-[4.2rem] font-black text-[#0B1623]" style={{ lineHeight: 1.05 }}>
+          <h1
+            className="text-5xl sm:text-[4.2rem] font-black text-[#0B1623] anim-fade-up"
+            style={{ lineHeight: 1.05 }}
+          >
             부동산 세금,<br />
-            <span className="text-amber-500">계약 전에.</span>
+            계약 전에.
           </h1>
-          <p className="mt-6 text-sm text-slate-500 leading-relaxed">
+          <p className="mt-6 text-sm text-slate-500 leading-relaxed anim-fade-up anim-delay-1">
             취득세, 양도세, 종부세, 증여세, 대출 상환까지.<br />
             2026년 최신 세율 기준으로 무료 계산합니다.
           </p>
+          <div className="anim-fade-up anim-delay-2">
+            <MiniAcquisitionCalc />
+          </div>
         </div>
 
-        {/* ── 계산기 ── */}
+        {/* ── 계산기 목록 ── */}
         <section className="mb-16">
-          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">계산기 6종</p>
+          <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3 anim-fade-up anim-delay-3">
+            계산기 6종
+          </p>
           <div className="border-t border-slate-100">
-            {calculators.map((calc) => (
+            {calculators.map((calc, i) => (
               <Link
                 key={calc.href}
                 href={calc.href}
-                className="flex items-center justify-between py-4 border-b border-slate-100 group hover:bg-slate-50 -mx-4 px-4 transition-colors"
+                className="flex items-center justify-between py-4 border-b border-slate-100 group hover:bg-slate-50 -mx-4 px-4 transition-colors anim-fade-up"
+                style={{ animationDelay: `${0.3 + i * 0.06}s` }}
               >
                 <div className="flex items-center gap-4">
                   <span className="text-xs font-black text-slate-200 w-6 tabular shrink-0 select-none">
@@ -296,7 +307,7 @@ export default function HomePage() {
         </section>
 
         {/* ── 2026 핵심 기준 ── */}
-        <section className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">2026 핵심 기준</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 border border-amber-200/60 rounded-xl overflow-hidden bg-amber-50/30">
             {stats2026.map((s, i) => (
@@ -307,10 +318,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         {/* ── 거래 단계별 세금 ── */}
-        <section className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">거래 단계별 세금</p>
           <div className="bg-slate-50 rounded-2xl overflow-hidden">
             {taxTimeline.map((t, i) => (
@@ -339,10 +350,10 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         {/* ── 실제로 이렇게 나온다 ── */}
-        <section className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">실제로 이렇게 나온다</p>
           <div className="space-y-3">
             {calcExamples.map((ex) => (
@@ -377,12 +388,12 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         <AdBanner slot="home-mid" className="my-8" />
 
         {/* ── 2026 세법 변경 ── */}
-        <section className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">2026 세법 변경</p>
           <div className="bg-slate-50 rounded-2xl overflow-hidden">
             {changes2026.map((c, i) => (
@@ -410,10 +421,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         {/* ── 자주 묻는 것들 ── */}
-        <section className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase mb-3">자주 묻는 것들</p>
           <div className="border-t border-slate-100">
             {faqs.map((faq) => (
@@ -429,10 +440,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         {/* ── 읽기 ── */}
-        <section className="mb-12">
+        <FadeIn className="mb-12">
           <div className="flex items-baseline justify-between mb-3">
             <p className="text-xs font-semibold text-slate-500 tracking-wide uppercase">읽기</p>
             <Link href="/blog" className="text-xs font-semibold text-slate-400 hover:text-amber-600 transition-colors">
@@ -461,7 +472,7 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </section>
+        </FadeIn>
 
         {/* 면책 */}
         <div className="border-t border-slate-100 pt-6">
