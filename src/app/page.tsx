@@ -255,18 +255,14 @@ export default function HomePage() {
 
         {/* ── 히어로 ── */}
         <div className="mb-16">
-          <div className="flex items-center gap-2 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-            <span className="text-xs font-semibold text-amber-600">2026년 최신 세율 반영</span>
-          </div>
           <h1 className="text-5xl sm:text-[4.2rem] font-black text-[#0B1623]" style={{ lineHeight: 1.05 }}>
-            부동산 세금,<br />
-            미리 보면<br />
+            세금을 알면<br />
+            결정이<br />
             <span className="text-amber-500">달라진다.</span>
           </h1>
           <p className="mt-6 text-sm text-slate-500 leading-relaxed">
-            취득·양도·종부·증여·대출·전월세 환산.<br />
-            숫자가 먼저다.
+            집 살 때, 갖는 동안, 팔 때, 받을 때.<br />
+            각 단계의 세금을 2026년 기준으로 계산합니다.
           </p>
         </div>
 
