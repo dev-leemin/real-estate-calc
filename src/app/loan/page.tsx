@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import LoanCalc from './LoanCalc'
 import AdBanner from '@/components/AdBanner'
+import LoanMethodCompare from '@/components/LoanMethodCompare'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
@@ -111,6 +112,8 @@ export default function LoanPage() {
         <LoanCalc />
 
         <AdBanner slot="loan-mid" className="my-8" />
+
+        <LoanMethodCompare />
 
         {/* 계산 공식 */}
         <section className="mt-8">

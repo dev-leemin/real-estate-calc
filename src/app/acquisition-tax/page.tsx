@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import AcquisitionTaxCalc from './AcquisitionTaxCalc'
 import AdBanner from '@/components/AdBanner'
+import TaxRateCompare from '@/components/TaxRateCompare'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
@@ -111,6 +112,8 @@ export default function AcquisitionTaxPage() {
         <AcquisitionTaxCalc />
 
         <AdBanner slot="acquisition-tax-mid" className="my-8" />
+
+        <TaxRateCompare />
 
         {/* 세율표 */}
         <section className="mt-8">

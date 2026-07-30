@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import CapitalGainsTaxCalc from './CapitalGainsTaxCalc'
 import AdBanner from '@/components/AdBanner'
+import LongHoldingDeduction from '@/components/LongHoldingDeduction'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
@@ -110,6 +111,8 @@ export default function CapitalGainsTaxPage() {
         <CapitalGainsTaxCalc />
 
         <AdBanner slot="capital-gains-mid" className="my-8" />
+
+        <LongHoldingDeduction />
 
         {/* 과세표준 세율표 */}
         <section className="mt-8">
