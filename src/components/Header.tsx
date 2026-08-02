@@ -61,6 +61,14 @@ export default function Header() {
           >
             블로그
           </Link>
+
+          {/* friz.dev 홈 */}
+          <a
+            href="https://friz.dev"
+            className="text-xs font-semibold flex-shrink-0 px-3 py-1.5 rounded-lg transition-all duration-150 text-white/30 hover:text-white hover:bg-white/10"
+          >
+            friz.dev
+          </a>
         </div>
       </div>
     </header>
