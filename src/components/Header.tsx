@@ -67,7 +67,7 @@ export default function Header() {
             href="https://friz.dev"
             className="text-xs font-semibold flex-shrink-0 px-3 py-1.5 rounded-lg transition-all duration-150 text-white/30 hover:text-white hover:bg-white/10"
           >
-            friz.dev
+            홈페이지 가기
           </a>
         </div>
       </div>

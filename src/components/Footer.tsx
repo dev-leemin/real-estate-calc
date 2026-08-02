@@ -59,6 +59,14 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+            <h3 className="text-xs font-semibold text-stone-300 uppercase tracking-wider mt-6 mb-3">friz.dev 서비스</h3>
+            <ul className="space-y-2">
+              <li><a href="https://salary.friz.dev" className="text-xs hover:text-amber-400 transition-colors">연봉 계산기</a></li>
+              <li><a href="https://work.friz.dev" className="text-xs hover:text-amber-400 transition-colors">근로 계산기</a></li>
+              <li><a href="https://invest.friz.dev" className="text-xs hover:text-amber-400 transition-colors">투자 계산기</a></li>
+              <li><a href="https://friz.dev" className="text-xs text-amber-500/60 hover:text-amber-400 transition-colors font-medium">← 홈페이지</a></li>
+            </ul>
           </div>
         </div>
 
